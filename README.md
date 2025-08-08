@@ -8,33 +8,6 @@ This is a simple E-Voting prototype:
 
 ## Setup
 
-1. Create the database and tables (example using psql):
-```
-CREATE DATABASE voting_system;
-\c voting_system
-
-CREATE TABLE voters (
-    voter_id SERIAL PRIMARY KEY,
-    name VARCHAR(100),
-    username VARCHAR(50) UNIQUE,
-    password VARCHAR(255),
-    has_voted BOOLEAN DEFAULT FALSE
-);
-
-CREATE TABLE candidates (
-    candidate_id SERIAL PRIMARY KEY,
-    name VARCHAR(100),
-    party VARCHAR(50),
-    votes INT DEFAULT 0
-);
-
-CREATE TABLE admin (
-    admin_id SERIAL PRIMARY KEY,
-    username VARCHAR(50) UNIQUE,
-    password VARCHAR(255)
-);
-```
-
 2. Update `src/main/resources/db.properties` with your DB password.
 
 3. Build:
