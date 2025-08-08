@@ -1,0 +1,15 @@
+# Ignore build files
+/target/
+
+# Ignore IDE config
+*.iml
+.idea/
+
+# OS stuff
+.DS_Store
+
+#Logs
+*.log
+
+# Credentials or config
+db.properties
